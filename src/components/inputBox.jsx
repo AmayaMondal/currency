@@ -5,7 +5,7 @@ function InputBox({
   amount,
   onAmountChange,
   onCurrencyChange,
-  currencyOptions = [], //usd or inr will be taken in array if anything else is passed by user it will be not crashed rather the empty rray will be passed.
+  currencyOptions = [], //usd or inr will be taken in array if anything else is passed by user it will be not crashed rather the empty array will be passed.
   selectCurrency = "usd",
   currencyDisable = false,
   amountDisable = false, //if true amount will be disabled .basically used in production build app
@@ -32,7 +32,7 @@ function InputBox({
           disabled={amountDisable}
           value={amount}
           onChange={
-            (e) => onAmountChange && onAmountChange(number(e.target.value)) //number is used as js tends to convert into string
+            (e) => onAmountChange && onAmountChange(Number(e.target.value)) //number is used as js tends to convert into string
           }
         />
       </div>

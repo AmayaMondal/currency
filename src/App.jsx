@@ -29,7 +29,7 @@ function App() {
       <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
         style={{
-          backgroundImage: pexels.jpg, //have to debug here
+          backgroundImage: `url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
         }}
       >
         <div className="w-full">
@@ -48,6 +48,8 @@ function App() {
                   onCurrencyChange={(currency) => {
                     setamount(amount);
                   }}
+                  selectCurrency={from}
+                  onAmountChange={(amount) => setamount(amount)}
                 />
               </div>
               <div className="relative w-full h-0.5">
